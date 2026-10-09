@@ -15,7 +15,13 @@ contract LaunchCoreDeploy is Script {
     function run() public {
         // 本地链用 ETH_LOCAL_PRIVATE_KEY。切到正式环境时改成 ETH_REAL_PRIVATE_KEY。
         // uint256 deployerPrivateKey = vm.envUint("ETH_LOCAL_PRIVATE_KEY");
+    // 本地网已部署的代理地址。换网时改成对应代理。
+        // address proxyAddress = 0x88D1aF96098a928eE278f162c1a84f339652f95b;
+
+    // 正式网用 ETH_REAL_PRIVATE_KEY。
         uint256 deployerPrivateKey = vm.envUint("ETH_REAL_PRIVATE_KEY");
+            // 本地网已部署的代理地址。换网时改成对应代理。
+        address proxyAddress = 0x66A2a634960b97875D1FC5dc902aadd26978a3F0;
 
         address deployer = vm.addr(deployerPrivateKey);
 
@@ -24,8 +30,6 @@ contract LaunchCoreDeploy is Script {
         // 新的实现。构造函数只负责禁止直接初始化，存储仍留在下面的代理里。
         LaunchCore launchCore = new LaunchCore();
 
-        // 本地网已部署的代理地址。换网时改成对应代理。
-        address proxyAddress = 0x88D1aF96098a928eE278f162c1a84f339652f95b;
 
         LaunchCore proxy = LaunchCore(proxyAddress);
         proxy.upgradeToAndCall(address(launchCore), "");
