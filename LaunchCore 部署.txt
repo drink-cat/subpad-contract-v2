@@ -1,0 +1,30 @@
+
+forge script script/LaunchCoreDeploy.sol --broadcast --gas-estimate-multiplier 1200
+forge script script/LaunchCoreUpgrade.sol --broadcast --gas-estimate-multiplier 1200
+
+
+本地网：
+  deployer addr =  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  LaunchCore addr =  0x6345e50859b0Ce82D8A495ba9894C6C81de385F3
+  Proxy addr =  0x88D1aF96098a928eE278f162c1a84f339652f95b
+
+  deployer addr =  0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+  LaunchCore addr =  0x7Ce73F8f636C6bD3357A0A8a59e0ab6462C955B0
+  Proxy addr =  0x88D1aF96098a928eE278f162c1a84f339652f95b
+
+
+测试网：
+  deployer addr =  0x64e710D2aaED9F4952e371499178befB6756257A
+  LaunchCore addr =  0xaDD24e4577F135dB7d06306A03011cEa67d5479C
+  Proxy addr =  0x66A2a634960b97875D1FC5dc902aadd26978a3F0
+Chain 11155111
+Block: 11862711
+
+  deployer addr =  0x64e710D2aaED9F4952e371499178befB6756257A
+  LaunchCore addr =  0xf2EbB3585044aD7014bd96c237F08b9ad75A8Cce
+  Proxy addr =  0x88D1aF96098a928eE278f162c1a84f339652f95b
+
+
+
+
+

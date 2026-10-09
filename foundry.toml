@@ -1,0 +1,20 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+#eth_rpc_url = "local"
+eth_rpc_url = "sepolia"
+
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "forge-std/=lib/forge-std/src/",
+    "@solmate/=lib/solmate/src/",
+]
+
+[rpc_endpoints]
+local = "${ETH_LOCAL_RPC_URL}"
+sepolia = "${ETH_SEPOLIA_RPC_URL}"
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
